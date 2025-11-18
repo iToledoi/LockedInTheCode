@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerMovement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -85,11 +85,11 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on ground
-        if (grounded)
+        if(grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
         // in air
-        else if (!grounded)
+        else if(!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
 
