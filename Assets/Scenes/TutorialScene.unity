@@ -2710,23 +2710,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01c749167ebb07943939f61d7bf011f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientation: {fileID: 0}
-  player: {fileID: 0}
-  playerObj: {fileID: 0}
-  rb: {fileID: 0}
-  rotationSpeed: 0
-  verticalSensitivity: 0
-  horizontalSensitivity: 0
+  orientation: {fileID: 2108007356}
+  player: {fileID: 549058226}
+  playerObj: {fileID: 549058226}
+  rb: {fileID: 549058228}
+  rotationSpeed: 10
+  verticalSensitivity: 400
+  horizontalSensitivity: 400
   Focus: {fileID: 0}
-  FirstPersonCam: {fileID: 0}
-  ThirdPersonCam: {fileID: 0}
-  Shifted3rdPersonCam: {fileID: 0}
-  crosshairCanvas: {fileID: 0}
+  FirstPersonCam: {fileID: 951563595}
+  ThirdPersonCam: {fileID: 1577712321}
+  Shifted3rdPersonCam: {fileID: 1882783305}
+  crosshairCanvas: {fileID: 1484329230}
   currentStyle: 0
 --- !u!1 &336341591
 GameObject:
@@ -11514,9 +11514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c749167ebb07943939f61d7bf011f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientation: {fileID: 549058226}
+  orientation: {fileID: 2108007356}
   player: {fileID: 549058226}
-  playerObj: {fileID: 635587975}
+  playerObj: {fileID: 549058226}
   rb: {fileID: 549058228}
   rotationSpeed: 7
   verticalSensitivity: 0
@@ -14458,7 +14458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052793317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: -0.000000014843386, z: 0.000000008702493, w: 0.8626676}
+  m_LocalRotation: {x: 0.5057713, y: 0.000000014843392, z: -0.0000000087024965, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
