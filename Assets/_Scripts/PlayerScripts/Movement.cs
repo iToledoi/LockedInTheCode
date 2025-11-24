@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
+    Vector3 groundNormal = Vector3.up;
+
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
@@ -45,8 +47,18 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+        // ground check (capture normal of the surface we hit)
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 0.5f + 0.3f, whatIsGround))
+        {
+            grounded = true;
+            groundNormal = hit.normal;
+        }
+        else
+        {
+            grounded = false;
+            groundNormal = Vector3.up;
+        }
 
         MyInput();
         SpeedControl();
@@ -81,16 +93,20 @@ public class Movement : MonoBehaviour
 
     private void MovePlayer()
     {
-        // calculate movement direction
+        // calculate raw movement direction from input
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        // on ground
-        if(grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        // Project movement onto the contact plane so we don't apply forces into walls/steep surfaces
+        Vector3 moveDirProjected = Vector3.ProjectOnPlane(moveDirection, groundNormal).normalized;
 
-        // in air
-        else if(!grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        if (moveDirProjected == Vector3.zero)
+            moveDirProjected = Vector3.zero; // explicit
+
+        // on ground -> use projected direction
+        if (grounded)
+            rb.AddForce(moveDirProjected * moveSpeed * 10f, ForceMode.Force);
+        else // in air, use a lofted control but still avoid forcing into surfaces
+            rb.AddForce(Vector3.ProjectOnPlane(moveDirection, Vector3.up).normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
 
     private void SpeedControl()
