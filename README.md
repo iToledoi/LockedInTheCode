@@ -1,43 +1,18 @@
 # LockedInTheCode
-- 3D Escape Room Game
-- 🔐 Escape Room Puzzle Game – Detailed Scope
 
 Link to current gameplay video (as of 11/24/25): https://youtu.be/8MvktXqKlqU?si=vaIq7KSGaNCN55fD
 
-## 🎯 Goal:
-Escape a futuristic lab by solving puzzles in three themed rooms before the system shuts down.
+## Group Members
+- Antonio Toledo Borja
+- Simmon Quan
+- Deeni Baez Flores
+- Ryan Alakija
 
-## 🧩 Game Structure:
-- Room 1: Control Room
-  - Puzzle 1: Keypad code (find digits hidden in the room)
-  - Puzzle 2: Button sequence (based on blinking lights)
-  - Puzzle 3: Object placement (drag items to correct slots)
-- Room 2: Power Core
-  - Puzzle 1: Laser redirection (rotate mirrors to hit targets)
-  - Puzzle 2: Circuit connection (connect wires to restore power)
-  - Puzzle 3: Pressure plates (step on plates in correct order)
-- Room 3: Memory Vault
-  - Puzzle 1: Audio clue matching (playback logs to find correct sequence)
-  - Puzzle 2: Symbol decoding (match symbols to meanings)
-  - Puzzle 3: Maze navigation (find exit using clues from previous rooms)
+## Current Target of the game
 
-## 🧠 Mechanics:
-- Physics system: Pick up and use items (keys, tools, notes)
-- Trigger system: Activate puzzles, doors, and effects
-- Timer (optional): Escape within 10 minutes or restart
-- Hint system (optional): Limited hints per room
+The current target of the game is to create an escape room partitioned into three different levels with a variety of gimmicks that the player must solve to reach the exit. Each subsequent level will have increasing difficulty, a different themed concept (dungeon, jungle, etc), and will use the core elements we implemented of picking up/dropping objects, interacting with keypads, and more puzzles in creative ways to challenge the player’s mind and problem-solving abilities.
 
-## 🌆 Environment:
-- Sci-fi lab with flickering lights, glitch effects, and ambient sounds
-- Each room has distinct lighting and color palette
-- Use particle effects and sound cues for feedback
-
-## 🧭 Progression:
-- Solve all puzzles in a room to unlock the next
-- Final escape triggers a cinematic or message
-- Optional: hidden collectibles or bonus room
-
-## 🎮 Controls
+## Controls
 **Player Movement**
 - WASD: Horizontal movement (forward, left, backwards, and right)
 - Space bar: Jump
@@ -50,7 +25,7 @@ Escape a futuristic lab by solving puzzles in three themed rooms before the syst
 - 2: Switch to third-person mode
 In first-person mode, point the crosshair and click on the object you intend to pickup. This will make the object freeze in place in front of the character, allowing the player to “hold” it. When an object is held, it will follow the player’s camera movements that are dependent on the mouse input. To drop the object currently held, click again.
 
-## 🎯 General Goals for each person
+## General Goals for each person
 **Antonio**
 - Scripts for puzzle systems (locked doors, keys, object triggers, etc).
 - Implement puzzle logic and connections between puzzles and room progression.
