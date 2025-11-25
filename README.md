@@ -27,11 +27,11 @@ In first-person mode, point the crosshair and click on the object you intend to 
 
 ## General Goals for each person
 **Antonio**
-- Scripts for puzzle systems (locked doors, keys, object triggers, etc).
+- Write scripts for puzzle systems (locked doors, keys, object triggers, etc).
 - Implement puzzle logic and connections between puzzles and room progression.
 - Create reusable puzzle prefabs and communicate with level design to place them correctly.
-- Level design and direction.
-- Handles merging teammate contributions in GitHub.
+- Handle level design and direction.
+- Handle merging teammate contributions in GitHub.
 
 **Simmon**
 - Assist in writing scripts & creating game objects for puzzle systems (ordered button activations, hidden keys/objects, hidden passcodes, moving platforms, etc).
