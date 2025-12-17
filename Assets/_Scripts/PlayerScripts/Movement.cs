@@ -6,6 +6,7 @@ using TMPro;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
+    public Animator animator; 
     public float moveSpeed;
 
     public float groundDrag;
@@ -68,6 +69,16 @@ public class Movement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (animator != null)
+    {
+        // horizontal speed only (ignore vertical velocity)
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        float speed = flatVel.magnitude;
+
+        animator.SetFloat("Speed", speed);
+        animator.SetBool("IsGrounded", grounded);
+    }
     }
 
     private void FixedUpdate()
