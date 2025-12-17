@@ -53,6 +53,7 @@ public class OpenKeypad : MonoBehaviour
         //close keypad with escape
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //set keypadText active only if keypadOB (the UI) was active
             if (keypadOB.activeSelf == true)
                 keypadText.SetActive(true);
             keypadOB.SetActive(false);
