@@ -96,6 +96,9 @@ public class Movement : MonoBehaviour
         {
             readyToJump = false;
 
+            if (animator != null)
+                animator.SetTrigger("Jump");
+
             Jump();
 
             Invoke(nameof(ResetJump), jumpCooldown);
