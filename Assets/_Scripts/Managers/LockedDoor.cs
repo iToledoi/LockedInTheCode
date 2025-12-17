@@ -67,7 +67,7 @@ public class LockedDoor : MonoBehaviour
         OpenDoor();
     }
 
-    void OpenDoor()
+    public void OpenDoor()
     {
         if (opened) return;
         opened = true;
