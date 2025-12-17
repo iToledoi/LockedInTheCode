@@ -88,12 +88,13 @@ public class PressurePlate : MonoBehaviour
         // Logic to activate the pressure plate
         // e.g., open a door, trigger an event, etc.
         //door.OpenDoor();
-        Destroy(gameObject);
+        door.gameObject.SetActive(false);
         Debug.Log("Door opened by pressure plate.");
     }
     private void DeactivatePlate()
     {
         // Logic to deactivate the pressure plate
         // e.g., close a door, reset an event, etc.
+        door.gameObject.SetActive(true);
     }
 }
