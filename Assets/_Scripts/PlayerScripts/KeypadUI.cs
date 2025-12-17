@@ -1,0 +1,77 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+//using UnityStandardAssets.Characters.FirstPerson;
+
+public class KeypadUI : MonoBehaviour
+{
+    public GameObject player;
+    public GameObject keypadOB;
+    public GameObject hud;
+    public GameObject inv;
+
+    public GameObject animateOB;
+    public Animator ANI;
+
+    //public Text textOB;
+    public TMP_Text textOB;
+    public string correctCode = "69420";
+
+    public AudioSource button;
+    public AudioSource correct;
+    public AudioSource wrong;
+
+    public bool animate;
+
+    void Start()
+    {
+        //
+    }
+
+    public void Number(int number)
+    {
+        //if user presses a number button while "Correct" or "Wrong" is displayed, clear it first
+        if (textOB.text == "Correct!" || textOB.text == "Wrong!")
+        {
+            textOB.text = "";
+        }
+
+        textOB.text += number.ToString();
+        //button.Play();
+    }
+
+    public void Execute()
+    {
+        if (textOB.text == correctCode)
+        {
+            //correct.Play();
+            textOB.text = "Correct!";
+        }
+        else
+        {
+            //wrong.Play();
+            textOB.text = "Wrong!";
+        }
+
+        //clear keypad after 1 second, if it hasn't been cleared already
+        StartCoroutine(ClearTextAfterDelay());
+    }
+
+    public void Clear()
+    {
+        textOB.text = "";
+        //button.Play();
+    }
+
+    IEnumerator ClearTextAfterDelay()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (textOB.text == "Correct!" || textOB.text == "Wrong!")
+        {
+            textOB.text = "";
+        }
+    }
+}
