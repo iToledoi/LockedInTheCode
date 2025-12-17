@@ -19,9 +19,21 @@ public class LockedDoor : MonoBehaviour
     [Tooltip("Optional visual root to disable instead of the whole GameObject. If null, the whole GameObject is used.")]
     public GameObject visualRoot;
 
+    [Tooltip("Animator that plays the open animation (for sliding / swinging doors). If null, door will just disappear like before.")]
+    public Animator animator;
+
+    [Tooltip("Name of the trigger parameter used to play the open animation.")]
+    public string openTriggerName = "Open";
+
+    [Header("Optional Lock Object")]
+    public GameObject lockObject;
+
     bool opened = false;
 
     void Reset()
+
+    
+
     {
         // ensure the door collider is a trigger so keys can be detected easily
         var col = GetComponent<Collider>();
@@ -73,24 +85,46 @@ public class LockedDoor : MonoBehaviour
         opened = true;
 
         // Optionally disable visuals and colliders instead of destroying the whole object
-        if (!destroyOnOpen)
+        GameObject root = visualRoot != null ? visualRoot : gameObject;
+
+        // Always disable colliders so the player can pass through
+        foreach (var c in root.GetComponentsInChildren<Collider>())
+            c.enabled = false;
+
+        if (lockObject != null)
+            Destroy(lockObject);
+
+        // If we have an Animator, play the open animation
+        if (animator != null)
         {
-            GameObject root = visualRoot != null ? visualRoot : gameObject;
+            string trigger = string.IsNullOrEmpty(openTriggerName) ? "Open" : openTriggerName;
+            animator.SetTrigger(trigger);
 
-            // disable renderers
-            foreach (var r in root.GetComponentsInChildren<Renderer>())
-                r.enabled = false;
-
-            // disable colliders
-            foreach (var c in root.GetComponentsInChildren<Collider>())
-                c.enabled = false;
+            // Optionally destroy after animation if desired
+            if (destroyOnOpen)
+            {
+                if (destroyDelay <= 0f)
+                    Destroy(root);
+                else
+                    Destroy(root, destroyDelay);
+            }
         }
         else
         {
-            if (destroyDelay <= 0f)
-                Destroy(gameObject);
+            // OLD BEHAVIOR for non-animated doors
+            if (!destroyOnOpen)
+            {
+                // disable renderers so door vanishes
+                foreach (var r in root.GetComponentsInChildren<Renderer>())
+                    r.enabled = false;
+            }
             else
-                Destroy(gameObject, destroyDelay);
+            {
+                if (destroyDelay <= 0f)
+                    Destroy(root);
+                else
+                    Destroy(root, destroyDelay);
+            }
         }
     }
 }
