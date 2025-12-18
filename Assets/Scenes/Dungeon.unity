@@ -105554,11 +105554,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 890533389}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 890533378}
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 890533383}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 890533388}
   m_SourcePrefab: {fileID: 100100000, guid: 5aff92d86b7d0414eafac6008907e5f4, type: 3}
 --- !u!1 &890533376 stripped
 GameObject:
@@ -105582,54 +105590,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 694483073}
-        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
-        m_MethodName: StartAutomaticMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1696457039}
-        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
-        m_MethodName: StartAutomaticMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 536100444}
-        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
-        m_MethodName: StartAutomaticMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 975054811}
-        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
-        m_MethodName: StartAutomaticMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1551984445}
         m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
         m_MethodName: StartAutomaticMovement
         m_Mode: 1
@@ -105667,6 +105627,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &890533388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890533376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pull Lever
+  key: 70
+--- !u!65 &890533389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890533376}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.39999998}
 --- !u!1001 &890666366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150201,12 +150196,16 @@ PrefabInstance:
     - target: {fileID: 64293212985207276, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1288141145}
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
@@ -150305,6 +150304,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1288141145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288141133}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.2, z: 0.7}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1288448217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180834,11 +180854,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1556540734}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1556540723}
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1556540728}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1556540733}
   m_SourcePrefab: {fileID: 100100000, guid: 5aff92d86b7d0414eafac6008907e5f4, type: 3}
 --- !u!1 &1556540721 stripped
 GameObject:
@@ -180860,7 +180888,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPullDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 694483072}
+        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
+        m_MethodName: StartAutomaticMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
@@ -180887,6 +180927,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1556540733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556540721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pull Lever
+  key: 70
+--- !u!65 &1556540734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556540721}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.39999998}
 --- !u!4 &1556605884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422452, guid: 52301af46bf2aca4cba80ecf307a7777,
@@ -213956,11 +214031,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1843965623}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1843965612}
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1843965617}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1843965622}
   m_SourcePrefab: {fileID: 100100000, guid: 5aff92d86b7d0414eafac6008907e5f4, type: 3}
 --- !u!1 &1843965610 stripped
 GameObject:
@@ -214009,6 +214092,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1843965622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843965610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pull Lever
+  key: 70
+--- !u!65 &1843965623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843965610}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.39999998}
 --- !u!4 &1844289341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 402256, guid: 41ec293d7ae663c418439466f0d7c93e,
@@ -228373,11 +228491,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1963997445}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1963997434}
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1963997439}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963997444}
   m_SourcePrefab: {fileID: 100100000, guid: 5aff92d86b7d0414eafac6008907e5f4, type: 3}
 --- !u!1 &1963997432 stripped
 GameObject:
@@ -228399,7 +228525,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPullDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 694483072}
+        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
+        m_MethodName: StartAutomaticMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
@@ -228426,6 +228564,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1963997444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963997432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pull Lever
+  key: 70
+--- !u!65 &1963997445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963997432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.39999998}
 --- !u!1001 &1964319271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235215,7 +235388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023615732}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.52573115, y: -0.000000014636622, z: 0.00000000904593, w: 0.85065085}
+  m_LocalRotation: {x: 0.52573115, y: -0.000000014636623, z: 0.000000009045929, w: 0.85065085}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -239507,7 +239680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052793317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: 0.000000014843392, z: -0.0000000087024965, w: 0.8626676}
+  m_LocalRotation: {x: 0.5057713, y: 0.000000014843391, z: -0.000000008702496, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -241297,11 +241470,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2068158401}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2068158390}
     - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2068158395}
+    - targetCorrespondingSourceObject: {fileID: 1325315441100904, guid: 5aff92d86b7d0414eafac6008907e5f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068158400}
   m_SourcePrefab: {fileID: 100100000, guid: 5aff92d86b7d0414eafac6008907e5f4, type: 3}
 --- !u!1 &2068158388 stripped
 GameObject:
@@ -241323,7 +241504,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPullDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 694483072}
+        m_TargetAssemblyTypeName: MovingPlatform, Assembly-CSharp
+        m_MethodName: StartAutomaticMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
@@ -241350,6 +241543,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2068158400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068158388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pull Lever
+  key: 70
+--- !u!65 &2068158401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068158388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.39999998}
 --- !u!1001 &2068534183
 PrefabInstance:
   m_ObjectHideFlags: 0
