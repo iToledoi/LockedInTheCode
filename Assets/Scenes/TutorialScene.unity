@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028301, g: 0.22571309, b: 0.30692127, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4071,7 +4071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304210156}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.329003, y: 0.26677856, z: 0.09745784, w: 0.90060437}
+  m_LocalRotation: {x: -0.32900307, y: 0.2667786, z: 0.09745785, w: 0.90060437}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4372,7 +4372,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 90
+  field of view: 45
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -4398,8 +4398,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: -0.36593083, y: 0.26252437, z: 0.10839669, w: 0.8862425}
+  m_LocalPosition: {x: 56.37, y: -1.76, z: -10.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7267,7 +7267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534629991}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.34757268, y: 0.26470432, z: 0.10295858, w: 0.89360195}
+  m_LocalRotation: {x: -0.34757268, y: 0.2647043, z: 0.10295855, w: 0.89360195}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18607,6 +18607,21 @@ PrefabInstance:
       objectReference: {fileID: 549058225}
     - target: {fileID: 7669425115390624786, guid: 7019f35aa4841c94db8fe1a91bbf046e,
         type: 3}
+      propertyPath: wrongClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 15296d01df667024d9a81a2998862330, type: 3}
+    - target: {fileID: 7669425115390624786, guid: 7019f35aa4841c94db8fe1a91bbf046e,
+        type: 3}
+      propertyPath: buttonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 72de5bf61b73f9549b3ea729f97fd231, type: 3}
+    - target: {fileID: 7669425115390624786, guid: 7019f35aa4841c94db8fe1a91bbf046e,
+        type: 3}
+      propertyPath: correctClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4340a2ad6db040d46a186eef5958faad, type: 3}
+    - target: {fileID: 7669425115390624786, guid: 7019f35aa4841c94db8fe1a91bbf046e,
+        type: 3}
       propertyPath: correctCode
       value: 1234
       objectReference: {fileID: 0}
@@ -22971,7 +22986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052793317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: 0.000000014843391, z: -0.000000008702496, w: 0.8626676}
+  m_LocalRotation: {x: 0.5057713, y: 0.000000014843392, z: -0.0000000087024965, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

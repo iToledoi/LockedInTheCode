@@ -22,15 +22,17 @@ public class KeypadUI : MonoBehaviour
     public string correctCode = "69420";
     public UnityEvent onCorrectCode;
 
-    public AudioSource button;
-    public AudioSource correct;
-    public AudioSource wrong;
+    private AudioSource sfxSource;
+
+    public AudioClip buttonClip;
+    public AudioClip correctClip;
+    public AudioClip wrongClip;
 
     public bool animate;
 
-    void Start()
+    void Awake()
     {
-        //
+        sfxSource = GetComponent<AudioSource>();
     }
 
     public void Number(int number)
@@ -42,21 +44,27 @@ public class KeypadUI : MonoBehaviour
         }
 
         textOB.text += number.ToString();
-        //button.Play();
+
+        //AudioManager.Instance.PlaySFX(buttonClip);
+        if (sfxSource != null)
+            sfxSource.PlayOneShot(buttonClip);
     }
 
     public void Execute()
     {
         if (textOB.text == correctCode)
         {
-            //correct.Play();
+            //AudioManager.Instance.PlaySFX(correctClip);
+            if (sfxSource != null)
+                sfxSource.PlayOneShot(correctClip);
             textOB.text = "Correct!";
             onCorrectCode.Invoke();
-
         }
         else
         {
-            //wrong.Play();
+            //AudioManager.Instance.PlaySFX(wrongClip);
+            if (sfxSource != null)
+                sfxSource.PlayOneShot(wrongClip);
             textOB.text = "Wrong!";
         }
 
@@ -67,7 +75,9 @@ public class KeypadUI : MonoBehaviour
     public void Clear()
     {
         textOB.text = "";
-        //button.Play();
+        //AudioManager.Instance.PlaySFX(buttonClip);
+        if (sfxSource != null)
+            sfxSource.PlayOneShot(buttonClip);
     }
 
     IEnumerator ClearTextAfterDelay()
