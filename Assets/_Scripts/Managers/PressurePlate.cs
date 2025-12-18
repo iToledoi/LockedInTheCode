@@ -70,7 +70,6 @@ public class PressurePlate : MonoBehaviour
         //door.OpenDoor();
         door.gameObject.SetActive(false);
         Debug.Log("Door opened by pressure plate.");
-        if 
     }
     private void DeactivatePlate()
     {
