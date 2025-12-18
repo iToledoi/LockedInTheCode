@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8612295239411230926}
   - component: {fileID: 8784445746602311166}
   - component: {fileID: 943021834813469352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2937022484336838357}
   - component: {fileID: 1016596340416784844}
   - component: {fileID: 9064529995764765251}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 7052507414716323746}
   - component: {fileID: 2283767372494915602}
   - component: {fileID: 6214059141645278271}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 7627473295231111550}
   - component: {fileID: 4832102333523299516}
   - component: {fileID: 4307772299848086195}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 3856516052991443979}
   - component: {fileID: 2658899430374763712}
   - component: {fileID: 6171901252103715870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 5135368098515444508}
   - component: {fileID: 6861762384498519307}
   - component: {fileID: 8177320157464517227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 8380404879732670637}
   - component: {fileID: 6420500253550541698}
   - component: {fileID: 41049632822808891}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_Clear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 9188958215243963571}
   - component: {fileID: 690924564574124933}
   - component: {fileID: 4916134533472547327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 301234392296866411}
   - component: {fileID: 3284276986942383298}
   - component: {fileID: 4320025830300066453}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 1963287217855337279}
   - component: {fileID: 5740529197632725798}
   - component: {fileID: 1405290132859826762}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1256,7 @@ GameObject:
   - component: {fileID: 4112495628948791815}
   - component: {fileID: 7120366944669601012}
   - component: {fileID: 7669425115390624786}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Keypad_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   animateOB: {fileID: 0}
   ANI: {fileID: 0}
   textOB: {fileID: 7677969549244849546}
-  correctCode: 69420
+  correctCode: 2534
   button: {fileID: 0}
   correct: {fileID: 0}
   wrong: {fileID: 0}
@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 7635145213347019222}
   - component: {fileID: 996059192098038444}
   - component: {fileID: 1302561972372399787}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1516,7 +1516,7 @@ GameObject:
   - component: {fileID: 4195519416453747398}
   - component: {fileID: 3136573645720196847}
   - component: {fileID: 4367622935697387612}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 3173204154324890465}
   - component: {fileID: 1891051010282395027}
   - component: {fileID: 1083950626738930401}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1781,7 +1781,7 @@ GameObject:
   - component: {fileID: 289661043008041189}
   - component: {fileID: 442536567650850513}
   - component: {fileID: 5653086041833852606}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1914,7 +1914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5588217433193403780}
   - component: {fileID: 3307662605964184685}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1967,7 +1967,7 @@ GameObject:
   - component: {fileID: 8727540519910423926}
   - component: {fileID: 316289738410016751}
   - component: {fileID: 7677969549244849546}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InputText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2103,8 @@ GameObject:
   - component: {fileID: 2240002010990922063}
   - component: {fileID: 6849250910634492039}
   - component: {fileID: 4536777290038309960}
-  m_Layer: 0
+  - component: {fileID: 1009238586784576320}
+  m_Layer: 7
   m_Name: KeyPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2196,8 +2197,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 2, z: 1.5}
+  m_Center: {x: 0, y: -0.4, z: 0}
 --- !u!114 &4536777290038309960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,8 +2212,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypadOB: {fileID: 1782829488692840307}
-  keypadText: {fileID: 0}
   inReach: 0
+--- !u!114 &1009238586784576320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406237775227912269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Use Keypad
+  key: 69
 --- !u!1 &3494181198458270712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,7 +2239,7 @@ GameObject:
   - component: {fileID: 3049395888370822182}
   - component: {fileID: 7922033549483694239}
   - component: {fileID: 8704913370483426228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2330,7 +2344,7 @@ GameObject:
   - component: {fileID: 837120527764865813}
   - component: {fileID: 7556033695399262285}
   - component: {fileID: 4514629043585210264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TextDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2435,7 +2449,7 @@ GameObject:
   - component: {fileID: 4519825706012146473}
   - component: {fileID: 6395635113303657704}
   - component: {fileID: 8258683256713236707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2554,7 @@ GameObject:
   - component: {fileID: 2231347764749216345}
   - component: {fileID: 5354524119982784080}
   - component: {fileID: 8372581090459644185}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3585199103392753013}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2717,7 +2731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2765839446137959522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Keys + Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2764,7 +2778,7 @@ GameObject:
   - component: {fileID: 388287666017336879}
   - component: {fileID: 6115855920944459699}
   - component: {fileID: 1147419457078539710}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2897,7 +2911,7 @@ GameObject:
   - component: {fileID: 814803828131035932}
   - component: {fileID: 2984478013228637429}
   - component: {fileID: 3988305408898366287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3002,7 +3016,7 @@ GameObject:
   - component: {fileID: 5459011590597889668}
   - component: {fileID: 3387205054018719796}
   - component: {fileID: 3700412786937515731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3106,7 +3120,7 @@ GameObject:
   - component: {fileID: 4417965787808110074}
   - component: {fileID: 183923503223401874}
   - component: {fileID: 6941878347904341542}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3241,7 +3255,7 @@ GameObject:
   - component: {fileID: 7375699714651849091}
   - component: {fileID: 151853161277585713}
   - component: {fileID: 8999902647442595776}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3373,7 +3387,7 @@ GameObject:
   - component: {fileID: 6066964350294761636}
   - component: {fileID: 3631245877548502201}
   - component: {fileID: 3092077268502447133}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3508,7 +3522,7 @@ GameObject:
   - component: {fileID: 1540703474727292830}
   - component: {fileID: 52547667446872146}
   - component: {fileID: 2586955199513486737}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3641,7 +3655,7 @@ GameObject:
   - component: {fileID: 3651128549411395366}
   - component: {fileID: 5727309054589833027}
   - component: {fileID: 8946009359879760280}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3746,7 +3760,7 @@ GameObject:
   - component: {fileID: 5836954948383159941}
   - component: {fileID: 7659598497262687449}
   - component: {fileID: 7390865904887546152}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3878,7 +3892,7 @@ GameObject:
   - component: {fileID: 2938581984469265849}
   - component: {fileID: 894592707779786756}
   - component: {fileID: 7064780029391472412}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4012,7 +4026,7 @@ GameObject:
   - component: {fileID: 6706455358042050243}
   - component: {fileID: 572719727757933217}
   - component: {fileID: 1580106864669316154}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4146,7 +4160,7 @@ GameObject:
   - component: {fileID: 1057294147458290187}
   - component: {fileID: 3322808142939009892}
   - component: {fileID: 4934874541757917489}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4281,7 +4295,7 @@ GameObject:
   - component: {fileID: 6720933485044382833}
   - component: {fileID: 7019494134035484727}
   - component: {fileID: 3152538105072077577}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4413,7 +4427,7 @@ GameObject:
   - component: {fileID: 7295257295844325212}
   - component: {fileID: 7849857824560220266}
   - component: {fileID: 7503607051968457428}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4548,7 +4562,7 @@ GameObject:
   - component: {fileID: 7841927358644312056}
   - component: {fileID: 8300516267259820988}
   - component: {fileID: 7366867107243758386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_Clear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4653,7 +4667,7 @@ GameObject:
   - component: {fileID: 3314636995854747031}
   - component: {fileID: 1161454805331060531}
   - component: {fileID: 3775809292438590317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4758,7 +4772,7 @@ GameObject:
   - component: {fileID: 4150858252718521781}
   - component: {fileID: 5431298920453429184}
   - component: {fileID: 7574877530696479480}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Button_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4890,7 +4904,7 @@ GameObject:
   - component: {fileID: 8140351354176897945}
   - component: {fileID: 1971586484519734347}
   - component: {fileID: 557320045726940549}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5024,7 +5038,7 @@ GameObject:
   - component: {fileID: 863509945424865106}
   - component: {fileID: 7351876074892658770}
   - component: {fileID: 4713018599778829434}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5159,7 +5173,7 @@ GameObject:
   - component: {fileID: 5054889049530652641}
   - component: {fileID: 5639019809552326003}
   - component: {fileID: 2811264241925824688}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: KeyPadDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5334,7 +5348,7 @@ GameObject:
   - component: {fileID: 7939855781926619106}
   - component: {fileID: 5632782937708605993}
   - component: {fileID: 2132721216971409571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

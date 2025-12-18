@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenKeypad : MonoBehaviour
 {
     public GameObject keypadOB;
-    public GameObject keypadText;
+    //public GameObject keypadText;
 
     public bool inReach;
     
@@ -14,16 +14,16 @@ public class OpenKeypad : MonoBehaviour
     {
         inReach = false;
         keypadOB.SetActive(false);
-        keypadText.SetActive(false);
+        //keypadText.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("In Reach");
+            //Debug.Log("In Reach");
             inReach = true;
-            keypadText.SetActive(true);
+            //keypadText.SetActive(true);
         }
     }
 
@@ -31,9 +31,9 @@ public class OpenKeypad : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Out of Reach");
+            //Debug.Log("Out of Reach");
             inReach = false;
-            keypadText.SetActive(false);
+            //keypadText.SetActive(false);
         }
     }
 
@@ -45,7 +45,7 @@ public class OpenKeypad : MonoBehaviour
         {
             Debug.Log("Open Keypad");
             keypadOB.SetActive(true);
-            keypadText.SetActive(false);
+            //keypadText.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -55,7 +55,7 @@ public class OpenKeypad : MonoBehaviour
         {
             //set keypadText active only if keypadOB (the UI) was active
             if (keypadOB.activeSelf == true)
-                keypadText.SetActive(true);
+                //keypadText.SetActive(true);
             keypadOB.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
