@@ -4,26 +4,6 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    //[SerializeField] private PressurePlateDoor currentDoor;
-    ////[SerializeField] private Animator animator;
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    //if (other.CompareTag("Player"))
-    //    //{
-    //        currentDoor.addPressurePlate(this);
-    //        //animator.SetBool("isPressed", true);
-    //    //}
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    //if (other.CompareTag("Player"))
-    //    //{
-    //        currentDoor.removePressurePlate(this);
-    //        //animator.SetBool("isPressed", false);
-    //    //}
-    //}
 
     [Header("Pressure Plate Parts")]
     public Transform plateTop;
