@@ -5,55 +5,53 @@ using UnityEngine.Events;
 
 public class Lever : MonoBehaviour
 {
-    bool leverDown = false;
     bool inReach = false;
-    //Animator anim;
+    bool isUp = false;
+
     public UnityEvent onPullDown;
     public UnityEvent onPullUp;
 
     public KeyCode interactKey = KeyCode.F;
+    public Animator anim;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //anim = GetComponent<Animator>();
-        leverDown = false;    
+        // Auto-grab Animator on the same object if not set
+        if (anim == null)
+            anim = GetComponent<Animator>();
+
+        if (anim != null)
+            anim.SetBool("isUp", isUp);
     }
 
-    // Lever toggle method
-    public void ToggleLever(){
-        leverDown = !leverDown;
-        //anim.SetBool("leverDown", leverDown);
-        if (leverDown){
-            //Debug.Log("Lever Pulled Down");
-            onPullDown.Invoke();
-        } else {
-            //Debug.Log("Lever Pulled Up");
+    public void ToggleLever()
+    {
+        isUp = !isUp;
+
+        if (anim != null)
+            anim.SetBool("isUp", isUp);
+
+        if (isUp)
             onPullUp.Invoke();
-        }
+        else
+            onPullDown.Invoke();
     }
 
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
             inReach = true;
-        }
     }
 
-    public void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
             inReach = false;
-        }
     }
 
-    public void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(interactKey) && inReach)
-        {
+        if (inReach && Input.GetKeyDown(interactKey))
             ToggleLever();
-        }
     }
 }
