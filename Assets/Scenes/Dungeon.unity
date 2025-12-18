@@ -36633,7 +36633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.36593074, y: 0.2625244, z: 0.10839668, w: 0.88624257}
+  m_LocalRotation: {x: -0.3659307, y: 0.26252434, z: 0.10839665, w: 0.88624257}
   m_LocalPosition: {x: 6.33, y: 13.91, z: -214.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -103023,7 +103023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Press F to flip lever
+  promptMessage: 
+  key: 0
 --- !u!114 &890533378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103042,6 +103043,7 @@ MonoBehaviour:
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 102
 --- !u!1001 &890666366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114109,7 +114111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993357628}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.3659307, y: 0.26252437, z: 0.108396664, w: 0.88624257}
+  m_LocalRotation: {x: -0.3659307, y: 0.26252434, z: 0.10839665, w: 0.88624257}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -176882,7 +176884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Press F to flip lever
+  promptMessage: 
+  key: 0
 --- !u!114 &1556540723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176901,6 +176904,7 @@ MonoBehaviour:
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 102
 --- !u!4 &1556605884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422452, guid: 52301af46bf2aca4cba80ecf307a7777,
@@ -203370,7 +203374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 
+  promptMessage: 
+  key: 0
 --- !u!54 &1783545759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209498,7 +209503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Press F to flip lever
+  promptMessage: 
+  key: 0
 --- !u!114 &1843965612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209517,6 +209523,7 @@ MonoBehaviour:
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 102
 --- !u!4 &1844289341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 402256, guid: 41ec293d7ae663c418439466f0d7c93e,
@@ -218395,8 +218402,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 3, z: 3}
+  m_Center: {x: 46.83, y: 0, z: 52.3}
 --- !u!4 &1918587290
 Transform:
   m_ObjectHideFlags: 0
@@ -223822,7 +223829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Press F to flip lever
+  promptMessage: 
+  key: 0
 --- !u!114 &1963997434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223841,6 +223849,7 @@ MonoBehaviour:
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 102
 --- !u!1001 &1964319271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230828,7 +230837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023615732}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5257311, y: -0.000000014636621, z: 0.000000009045928, w: 0.85065085}
+  m_LocalRotation: {x: 0.5257311, y: 0.000000014636621, z: -0.000000009045928, w: 0.85065085}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -235120,7 +235129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052793317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: 0.000000014843391, z: -0.000000008702496, w: 0.8626676}
+  m_LocalRotation: {x: 0.5057713, y: -0.000000014843384, z: 0.000000008702493, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -236909,7 +236918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3842bca555a0a5b4999bbe704897e761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Press F to flip lever
+  promptMessage: 
+  key: 0
 --- !u!114 &2068158390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236928,6 +236938,7 @@ MonoBehaviour:
   onPullUp:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 102
 --- !u!1001 &2068534183
 PrefabInstance:
   m_ObjectHideFlags: 0
