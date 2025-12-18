@@ -12,6 +12,12 @@ public class Teleporter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Stop the timer as the player has escaped
+            Timer timer = FindObjectOfType<Timer>();
+            if (timer != null)
+            {
+                timer.StopTimer();
+            }
             SceneManager.LoadScene(sceneToLoad);
         }
     }

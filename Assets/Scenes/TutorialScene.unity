@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7267,7 +7267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534629991}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.34757268, y: 0.2647043, z: 0.10295855, w: 0.89360195}
+  m_LocalRotation: {x: -0.3475727, y: 0.26470432, z: 0.102958575, w: 0.89360195}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12206,7 +12206,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2039787551}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1705926226923432, guid: 7ac811e3dc71d94498d791acafb425d3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1023197380}
   m_SourcePrefab: {fileID: 100100000, guid: 7ac811e3dc71d94498d791acafb425d3, type: 3}
 --- !u!4 &1023197378 stripped
 Transform:
@@ -12214,6 +12218,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1023197377}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1023197379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1705926226923432, guid: 7ac811e3dc71d94498d791acafb425d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1023197377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1023197380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023197379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b95249a1f79d7e4f95aefc28a87e070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelIdentifiers:
+  - WareHouse
+  bestTimeTexts:
+  - {fileID: 2039787552}
 --- !u!1001 &1031618858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22411,7 +22437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023615732}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5257311, y: -0.000000014636621, z: 0.000000009045928, w: 0.85065085}
+  m_LocalRotation: {x: 0.5257311, y: 0.000000014636621, z: -0.000000009045928, w: 0.85065085}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22986,7 +23012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052793317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: 0.000000014843392, z: -0.0000000087024965, w: 0.8626676}
+  m_LocalRotation: {x: 0.5057713, y: -0.000000014843386, z: 0.000000008702493, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
