@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 //using UnityStandardAssets.Characters.FirstPerson;
 
 public class KeypadUI : MonoBehaviour
@@ -18,6 +20,7 @@ public class KeypadUI : MonoBehaviour
     //public Text textOB;
     public TMP_Text textOB;
     public string correctCode = "69420";
+    public UnityEvent onCorrectCode;
 
     public AudioSource button;
     public AudioSource correct;
@@ -48,6 +51,8 @@ public class KeypadUI : MonoBehaviour
         {
             //correct.Play();
             textOB.text = "Correct!";
+            onCorrectCode.Invoke();
+
         }
         else
         {
