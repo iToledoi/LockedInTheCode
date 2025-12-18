@@ -6,9 +6,12 @@ using UnityEngine.Events;
 public class Lever : MonoBehaviour
 {
     bool leverDown = false;
+    bool inReach = false;
     //Animator anim;
     public UnityEvent onPullDown;
-    public UnityEvent onPullUp; 
+    public UnityEvent onPullUp;
+
+    public KeyCode interactKey = KeyCode.F;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +25,35 @@ public class Lever : MonoBehaviour
         leverDown = !leverDown;
         //anim.SetBool("leverDown", leverDown);
         if (leverDown){
-            Debug.Log("Lever Pulled Down");
+            //Debug.Log("Lever Pulled Down");
             onPullDown.Invoke();
         } else {
-            Debug.Log("Lever Pulled Up");
+            //Debug.Log("Lever Pulled Up");
             onPullUp.Invoke();
         }
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inReach = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inReach = false;
+        }
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(interactKey) && inReach)
+        {
+            ToggleLever();
+        }
+    }
 }
