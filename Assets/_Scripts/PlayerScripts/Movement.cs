@@ -38,12 +38,25 @@ public class Movement : MonoBehaviour
 
     Rigidbody rb;
 
+    [Header("Sound")]
+    private AudioSource moveSFX;
+
+    public AudioClip footSteps;
+    public AudioClip jump;
+
+    public float volume = 0.7f;
+
+    private float nextStepTime = 0f;
+    public float stepRate = 0.5f;       // time between steps
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
         readyToJump = true;
+
+        moveSFX = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -64,6 +77,21 @@ public class Movement : MonoBehaviour
         MyInput();
         SpeedControl();
 
+        // play footstep sounds
+        if (grounded && rb.velocity.magnitude > 0.1f)
+        {
+            if (Time.time >= nextStepTime)
+            {
+                if (moveSFX != null && footSteps != null)
+                {
+                    //Debug.Log("Playing footstep sound");
+                    moveSFX.PlayOneShot(footSteps, volume);
+                }
+
+                nextStepTime = Time.time + stepRate;
+            }
+        }
+
         // handle drag
         if (grounded)
             rb.drag = groundDrag;
@@ -71,14 +99,14 @@ public class Movement : MonoBehaviour
             rb.drag = 0;
 
         if (animator != null)
-    {
-        // horizontal speed only (ignore vertical velocity)
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        float speed = flatVel.magnitude;
+        {
+            // horizontal speed only (ignore vertical velocity)
+            Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            float speed = flatVel.magnitude;
 
-        animator.SetFloat("Speed", speed);
-        animator.SetBool("IsGrounded", grounded);
-    }
+            animator.SetFloat("Speed", speed);
+            animator.SetBool("IsGrounded", grounded);
+        }
     }
 
     private void FixedUpdate()
@@ -141,6 +169,13 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        //play jump sound
+        if (moveSFX != null && jump != null)
+        {
+            //Debug.Log("Playing jump sound");
+            moveSFX.PlayOneShot(jump, volume);
+        }
     }
     private void ResetJump()
     {
