@@ -32278,6 +32278,7 @@ GameObject:
   - component: {fileID: 283360932}
   - component: {fileID: 283360931}
   - component: {fileID: 283360930}
+  - component: {fileID: 283360933}
   m_Layer: 0
   m_Name: DungeonDoor_Blue
   m_TagString: Untagged
@@ -32320,10 +32321,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredKeyId: BlueKey
   requireHeld: 1
-  destroyOnOpen: 1
+  destroyOnOpen: 0
   destroyDelay: 0
   visualRoot: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 283360933}
   openTriggerName: Open
   lockObject: {fileID: 1974021827}
 --- !u!4 &283360932
@@ -32335,7 +32336,7 @@ Transform:
   m_GameObject: {fileID: 283360929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.4699, y: 7.1406674, z: -94.26842}
+  m_LocalPosition: {x: 77.4699, y: 7.140667, z: -94.26842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32343,6 +32344,27 @@ Transform:
   - {fileID: 809173451}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &283360933
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283360929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a205496f1c0e54874b066e13dfa81166, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &283701816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222779,6 +222801,7 @@ GameObject:
   - component: {fileID: 1918587290}
   - component: {fileID: 1918587289}
   - component: {fileID: 1918587291}
+  - component: {fileID: 1918587292}
   m_Layer: 0
   m_Name: DungeonDoor_Red
   m_TagString: Untagged
@@ -222816,7 +222839,7 @@ Transform:
   m_GameObject: {fileID: 1918587288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8900013, y: 17.386, z: -147.39}
+  m_LocalPosition: {x: -3.890001, y: 17.386, z: -147.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -222838,12 +222861,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredKeyId: RedKey
   requireHeld: 1
-  destroyOnOpen: 1
+  destroyOnOpen: 0
   destroyDelay: 0
   visualRoot: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 1918587292}
   openTriggerName: Open
   lockObject: {fileID: 968752924}
+--- !u!95 &1918587292
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918587288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b46c7ffa46bcc4a0da5b3928c66c99fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1918636156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 470398, guid: a3a688bad45e60446bf326f3e998e1da,
@@ -235046,7 +235090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023615732}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.52573115, y: 0.00000001463662, z: -0.0000000090459285, w: 0.85065085}
+  m_LocalRotation: {x: 0.52573115, y: -0.00000001463662, z: 0.0000000090459285, w: 0.85065085}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -239338,7 +239382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052793317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: 0.000000014843391, z: -0.000000008702496, w: 0.8626676}
+  m_LocalRotation: {x: 0.5057713, y: -0.000000014843384, z: 0.000000008702493, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
