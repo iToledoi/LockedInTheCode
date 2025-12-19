@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class PressurePlateDoor : MonoBehaviour
 {
-    public bool isDoorOpen = false;
+    public bool isDoorOpen = false; // all doors initially are closed
     public float destroyDelay = 0f;
     [SerializeField] private int requiredSwitchesToOpen = 1;
+    // change this to set how many pressure plates are needed to open the door
 
     private List<PressurePlate> currentSwitchesOpen = new();
 
-    //public Animator doorAnimator;
-
-    public void addPressurePlate(PressurePlate currentPlate)
+    public void addPressurePlate(PressurePlate currentPlate) // add a pressure plate to the list of currently activated plates
     {
         if (!currentSwitchesOpen.Contains(currentPlate))
         {
@@ -21,7 +20,7 @@ public class PressurePlateDoor : MonoBehaviour
         TryOpen();
     }
 
-    public void removePressurePlate(PressurePlate currentPlate)
+    public void removePressurePlate(PressurePlate currentPlate) // remove a pressure plate from the list of currently activated plates
     {
         if (currentSwitchesOpen.Contains(currentPlate))
         {
@@ -30,7 +29,7 @@ public class PressurePlateDoor : MonoBehaviour
         TryOpen();
     }
 
-    private void TryOpen()
+    private void TryOpen() // determine if door should open or close by comparing activated plates to door requirement
     {
         if (currentSwitchesOpen.Count >= requiredSwitchesToOpen)
         {
@@ -45,13 +44,11 @@ public class PressurePlateDoor : MonoBehaviour
     private void closeDoor()
     {
         isDoorOpen = false;
-        //doorAnimator.SetBool("isOpen", false);
     }
 
-    private void openDoor()
+    private void openDoor() // if door should open, set isDoorOpen to true and destroy the door object
     {
         isDoorOpen = true;
-        //doorAnimator.SetBool("isOpen", true);
         if (destroyDelay <= 0f)
             Destroy(gameObject);
         else

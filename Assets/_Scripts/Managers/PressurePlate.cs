@@ -5,47 +5,43 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     [Header("Pressure Plate Parts")]
-    public Transform plateTop;
+    public Transform plateTop; // the part of the plate that physically moves up/down
 
     [Header("Movement Settings")]
-    public float pressedHeight = -0.1f;
+    public float pressedHeight = -0.1f; // how far down the plate moves when pressed
     public float moveSpeed = 3f;
-    public float requiredWeight = 10f;
+    public float requiredWeight = 10f; // minimum weight the pressure plate needs to activate
 
     float currentWeight = 0f;
     Vector3 initialPosition;
 
     [Header("Door To Open")]
-    public LockedDoor door;          // drag your bars door (with LockedDoor + Animator) here
+    public LockedDoor door;    // the door that this pressure plate controls   
 
-    HashSet<Rigidbody> objectsOnPlate = new HashSet<Rigidbody>();
+    HashSet<Rigidbody> objectsOnPlate = new HashSet<Rigidbody>(); // tracking objects on the plate
 
     Animator doorAnimator;
-    bool doorIsOpen = false;         // track door state ourselves
+    bool doorIsOpen = false;       
 
     void Start()
     {
         initialPosition = plateTop.localPosition;
 
         if (door != null)
-            doorAnimator = door.GetComponent<Animator>();
+            doorAnimator = door.GetComponent<Animator>(); // get the door's animator
     }
 
     void Update()
     {
-        // 1) Move plate visual
-        Vector3 targetPosition = initialPosition;
+
+        Vector3 targetPosition = initialPosition; // start with unpressed position
 
         if (currentWeight > 0)
             targetPosition = initialPosition + Vector3.up * pressedHeight;
 
-        plateTop.localPosition = Vector3.Lerp(
-            plateTop.localPosition,
-            targetPosition,
-            Time.deltaTime * moveSpeed
-        );
+        plateTop.localPosition = Vector3.Lerp(plateTop.localPosition, targetPosition, Time.deltaTime * moveSpeed);
 
-        // 2) Decide if door should be open or closed
+        // condition to determine if the pressure plate should open the door
         bool shouldOpen = currentWeight >= requiredWeight;
 
         if (shouldOpen && !doorIsOpen)
@@ -61,10 +57,10 @@ public class PressurePlate : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Rigidbody rb = other.attachedRigidbody;
-        if (rb != null && !objectsOnPlate.Contains(rb))
+        if (rb != null && !objectsOnPlate.Contains(rb)) // ensure it's a rigidbody and not already counted
         {
             objectsOnPlate.Add(rb);
-            currentWeight += rb.mass;
+            currentWeight += rb.mass; // adds the object's mass to the current weight tracker
         }
     }
 
@@ -74,7 +70,7 @@ public class PressurePlate : MonoBehaviour
         if (rb != null && objectsOnPlate.Contains(rb))
         {
             objectsOnPlate.Remove(rb);
-            currentWeight -= rb.mass;
+            currentWeight -= rb.mass; // subtracts the object's mass from the current weight tracker
         }
     }
 
@@ -86,7 +82,7 @@ public class PressurePlate : MonoBehaviour
         {
             Debug.Log("Plate → OPEN trigger");
             doorAnimator.ResetTrigger("Close");
-            doorAnimator.SetTrigger("Open");
+            doorAnimator.SetTrigger("Open"); // animations
         }
     }
 

@@ -5,18 +5,18 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     [SerializeField]
-    private WaypointPath waypointPath;
+    private WaypointPath waypointPath; // waypointPath holds empty game objects outlining the path the platform will follow
 
     [SerializeField]
-    private float speed = 2f;
+    private float speed = 2f; // default speed of the platform, should be adjusted to increase difficulty of parkour
     private int currentWaypointIndex = 0;
     private int targetWaypointIndex = 0;
     [SerializeField]
-    private bool isMovingAutomatically = false;
+    private bool isMovingAutomatically = false; // initially set to false so platform only moves when triggered
     private Transform player;
     private Vector3 lastPosition;
 
-    // Initialize the platform
+    // initialize the platform
     private void Start()
     {
         targetWaypointIndex = currentWaypointIndex;
@@ -25,13 +25,13 @@ public class MovingPlatform : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Move the platform towards the target waypoint
+        // move the platform towards the target waypoint
         if (currentWaypointIndex != targetWaypointIndex || isMovingAutomatically)
         {
             MoveTowardsTarget();
         }
 
-        // Move the player along with the platform
+        // move the player along with the platform
         Vector3 delta = transform.position - lastPosition;
         if (player != null)
         {
@@ -44,12 +44,13 @@ public class MovingPlatform : MonoBehaviour
         lastPosition = transform.position;
     }
 
-    // Moves the platform towards the target waypoint
+    // moves the platform towards the target waypoint
     private void MoveTowardsTarget()
     {
         Transform target = waypointPath.GetWaypoint(targetWaypointIndex);
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime); // moves the platform towards the target waypoint at the specified speed
         if (Vector3.Distance(transform.position, target.position) < 0.1f)
+            // checks if the object is close enough to the target waypoint
         {
             currentWaypointIndex = targetWaypointIndex;
             if (isMovingAutomatically)
@@ -59,7 +60,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    // Public methods to control platform movement  
+    //  methods to control platfom direction along waypoints and stop/start movement
     public void MoveToNextWaypoint()
     {
         isMovingAutomatically = false;
@@ -72,7 +73,7 @@ public class MovingPlatform : MonoBehaviour
         targetWaypointIndex = waypointPath.GetPreviousWaypointIndex(currentWaypointIndex);
     }
 
-    // Starts/stops automatic movement through waypoints
+    // starts/stops automatic movement through waypoints
     public void StartAutomaticMovement()
     {
         isMovingAutomatically = true;
@@ -81,18 +82,19 @@ public class MovingPlatform : MonoBehaviour
 
     public void StopAutomaticMovement()
     {
-        isMovingAutomatically = false;
+        isMovingAutomatically = false; // platform will stop at the current waypoint
     }
 
-    // Detect player collision to parent/unparent the player to/from the platform
+    // detects if player is within the platform collider
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) 
         {
             player = collision.transform;
         }
     }
 
+    // detects if player exits the platform collider
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
