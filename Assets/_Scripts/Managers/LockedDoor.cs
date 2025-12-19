@@ -56,6 +56,7 @@ public class LockedDoor : MonoBehaviour
         }
     }
 
+    // Detect key collisions
     void OnTriggerEnter(Collider other)
     {
         if (opened) return;
@@ -79,6 +80,7 @@ public class LockedDoor : MonoBehaviour
         OpenDoor();
     }
 
+    // Open the door: play animation or disable/destroy
     public void OpenDoor()
     {
         if (opened) return;

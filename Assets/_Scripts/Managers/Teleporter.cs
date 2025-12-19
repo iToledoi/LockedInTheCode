@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Teleporter : MonoBehaviour
-{
+{   
+    // Name of the scene to load when the player uses the teleporter
     [SerializeField] private string sceneToLoad;
 
     // Trigger the scene change when the player enters the teleporter

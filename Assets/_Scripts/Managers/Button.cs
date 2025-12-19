@@ -17,6 +17,7 @@ public class Button : MonoBehaviour
     // Button press method
     public void PressButton(){
         Debug.Log("Button Pressed");
+        // Invoke the event only if the button was not already pressed
         if (!buttonPressed){
             buttonPressed = true;
             onButtonPress.Invoke();

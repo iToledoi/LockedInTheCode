@@ -6,10 +6,12 @@ using UnityEngine.UI;
 using TMPro;
 
 public class Interactable : MonoBehaviour
-{
+{   
+    // Message to display when player is in range
     public string promptMessage;
     public char key;
 
+    // Detect when player enters interaction range
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -18,6 +20,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    // Detect when player exits interaction range
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -26,24 +29,4 @@ public class Interactable : MonoBehaviour
         }
     }
     
-    //Outline outline;
-    // public string message;
-    /*
-    public UnityEvent onInteract;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        outline = GetComponent<Outline>();
-        DisableOutline();
-    }
-
-    public void DisableOutline(){
-        outline.enabled = false;
-    }
-
-    public void EnableOutline(){
-        outline.enabled = true;
-    }
-    */
 }

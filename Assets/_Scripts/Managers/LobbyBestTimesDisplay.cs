@@ -10,11 +10,14 @@ public class LobbyBestTimesDisplay : MonoBehaviour
 
     // Display the best times for each level in the lobby
     void Start()
-    {
+    {   
+        // Load and display best times
         for (int i = 0; i < levelIdentifiers.Length && i < bestTimeTexts.Length; i++)
-        {
+        {   
+            // Retrieve best time from PlayerPrefs
             float bestTime = PlayerPrefs.GetFloat("BestTime_" + levelIdentifiers[i], float.MaxValue);
             string timeString;
+            // Format time for display
             if (bestTime == float.MaxValue)
             {
                 timeString = "--:--";

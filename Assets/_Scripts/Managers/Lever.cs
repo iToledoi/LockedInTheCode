@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Lever : MonoBehaviour
-{
+{   
+    // State variables
     bool inReach = false;
     bool isUp = false;
 
+    // Events for lever actions
     public UnityEvent onPullDown;
     public UnityEvent onPullUp;
 
+    // Interaction key and animator reference
     public KeyCode interactKey = KeyCode.F;
     public Animator anim;
 
@@ -24,10 +27,12 @@ public class Lever : MonoBehaviour
             anim.SetBool("isUp", isUp);
     }
 
+    // Method to toggle lever state
     public void ToggleLever()
     {
         isUp = !isUp;
 
+        // Update animator state
         if (anim != null)
             anim.SetBool("isUp", isUp);
 
@@ -37,18 +42,21 @@ public class Lever : MonoBehaviour
             onPullDown.Invoke();
     }
 
+    // Detect player entering/exiting interaction range
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
             inReach = true;
     }
 
+    // Detect player exiting interaction range
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
             inReach = false;
     }
 
+    // Check for interaction input
     void Update()
     {
         if (inReach && Input.GetKeyDown(interactKey))
