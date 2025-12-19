@@ -6,7 +6,7 @@ using TMPro;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    public Animator animator; 
+    public Animator animator; // controls player animations like (Idle, walk, jump) 
     public float moveSpeed;
 
     public float groundDrag;
@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
+    // Stores which direction the ground is facing (for slopes)
     Vector3 groundNormal = Vector3.up;
 
     [Header("Keybinds")]
@@ -29,7 +30,7 @@ public class Movement : MonoBehaviour
     public LayerMask whatIsGround;
     bool grounded;
 
-    public Transform orientation;
+    public Transform orientation; // Where "forward" movement is relative to camera
 
     float horizontalInput;
     float verticalInput;
@@ -61,12 +62,12 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        // ground check (capture normal of the surface we hit)
+        // Raycast slightly below the player to check if grounded
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 0.5f + 0.3f, whatIsGround))
         {
             grounded = true;
-            groundNormal = hit.normal;
+            groundNormal = hit.normal; // Remember ground normal for slope movement
         }
         else
         {
@@ -123,7 +124,7 @@ public class Movement : MonoBehaviour
         if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
-
+            // trigger jump animation once when jump starts
             if (animator != null)
                 animator.SetTrigger("Jump");
 
@@ -153,6 +154,7 @@ public class Movement : MonoBehaviour
 
     private void SpeedControl()
     {
+        // only clamp horizontal speed, keep vertical as-is
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         // limit velocity if needed

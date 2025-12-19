@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// weighted pressure plate that moves down when pressed and
+// opens/closes a door based on total mass on the plate.
 public class PressurePlate : MonoBehaviour
 {
     [Header("Pressure Plate Parts")]
@@ -80,6 +82,7 @@ public class PressurePlate : MonoBehaviour
 
         if (doorAnimator != null)
         {
+            // reset opposite trigger in case it was queued
             Debug.Log("Plate → OPEN trigger");
             doorAnimator.ResetTrigger("Close");
             doorAnimator.SetTrigger("Open"); // animations

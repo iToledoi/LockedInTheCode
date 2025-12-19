@@ -18,18 +18,18 @@ public class PickupItem : MonoBehaviour
     {
         if (!IsHeld || followTarget == null) return;
 
-        // Move physics body toward the target so collisions still occur.
+        // move physics body toward the target so collisions still occur.
         Vector3 toTarget = followTarget.position - rb.position;
 
-        // Desired velocity proportional to distance (spring-like). Clamp to maxFollowSpeed.
+        // desired velocity proportional to distance (spring-like). Clamp to maxFollowSpeed.
         Vector3 desiredVel = toTarget * moveSpeed;
         if (desiredVel.magnitude > maxFollowSpeed)
             desiredVel = desiredVel.normalized * maxFollowSpeed;
 
-        // Smoothly change velocity (helps avoid popping through thin colliders).
+        // smoothly change velocity (helps avoid popping through thin colliders).
         rb.velocity = Vector3.Lerp(rb.velocity, desiredVel, 0.9f);
 
-        // Smoothly rotate toward the hold rotation using MoveRotation so physics interacts normally.
+        // smoothly rotate toward the hold rotation using MoveRotation so physics interacts normally.
         Quaternion targetRot = followTarget.rotation;
         rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRot, rotateSpeed * Time.fixedDeltaTime));
     }
@@ -45,7 +45,7 @@ public class PickupItem : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
-        // Keep the rigidbody non-kinematic so collisions still occur, disable gravity while held
+        // keep the rigidbody non-kinematic so collisions still occur, disable gravity while held
         rb.isKinematic = false;
         rb.useGravity = false;
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
@@ -53,19 +53,19 @@ public class PickupItem : MonoBehaviour
 
         IsHeld = true;
 
-        // Do NOT parent the object to the holdPoint. We'll follow it using physics so collisions remain.
+        // do NOT parent the object to the holdPoint. We'll follow it using physics so collisions remain.
     }
     public void Drop(){
         if (!IsHeld) return;
         IsHeld = false;
         followTarget = null;
 
-        // Restore physics behavior
+        // restore physics behavior
         rb.useGravity = true;
         rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
         rb.interpolation = RigidbodyInterpolation.None;
 
-        // Restore parent to original if any
+        // restore parent to original if any
         transform.SetParent(originalParent, true);
 
         var cam = Camera.main;

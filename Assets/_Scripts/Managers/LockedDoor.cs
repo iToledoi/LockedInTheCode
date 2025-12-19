@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// handles doors that can be opened by bringing the correct KeyItem to their trigger.
 public class LockedDoor : MonoBehaviour
 {
     [Tooltip("The ID of the key that opens this door. Must match a KeyItem.keyId.")]
@@ -31,9 +32,6 @@ public class LockedDoor : MonoBehaviour
     bool opened = false;
 
     void Reset()
-
-    
-
     {
         // ensure the door collider is a trigger so keys can be detected easily
         var col = GetComponent<Collider>();
