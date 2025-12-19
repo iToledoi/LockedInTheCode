@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class CrystalSequenceManager : MonoBehaviour
 {
-    public ColorFlash[] sequence;
+    public ColorFlash[] sequence;               //assign objects in inspector to flash in sequence
     public float delayBetweenCrystals = 0.3f;
 
     private Coroutine sequenceRoutine;
 
+    // start playing the flash sequence
     public void PlaySequence()
     {
-        //if (!gameObject.activeInHierarchy)
-        //{
-        //    Debug.LogError("CrystalSequenceManager is inactive!");
-        //    return;
-        //}
-
         if (sequenceRoutine == null)
         {
-            Debug.Log("PlaySequence called.");
             sequenceRoutine = StartCoroutine(SequenceRoutine());
         }
     }
 
     private IEnumerator SequenceRoutine()
     {
-        Debug.Log("Starting crystal sequence...");
+        // iterate through and flash each crystal in sequence with delay
         foreach (ColorFlash crystal in sequence)
         {
             crystal.Flash();

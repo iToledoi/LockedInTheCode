@@ -14,6 +14,7 @@ public class InteractionPromptManager : MonoBehaviour
 
     private void Awake()
     {
+        //create one instance of the manager that persists across scenes
         if (Instance == null)
         {
             Instance = this;

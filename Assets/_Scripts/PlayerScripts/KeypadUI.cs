@@ -17,7 +17,6 @@ public class KeypadUI : MonoBehaviour
     public GameObject animateOB;
     public Animator ANI;
 
-    //public Text textOB;
     public TMP_Text textOB;
     public string correctCode = "69420";
     public UnityEvent onCorrectCode;
@@ -30,6 +29,7 @@ public class KeypadUI : MonoBehaviour
 
     public bool animate;
 
+    //initialize audio source
     void Awake()
     {
         sfxSource = GetComponent<AudioSource>();
@@ -43,28 +43,31 @@ public class KeypadUI : MonoBehaviour
             textOB.text = "";
         }
 
-        textOB.text += number.ToString();
+        textOB.text += number.ToString();       //add number to keypad display
 
-        //AudioManager.Instance.PlaySFX(buttonClip);
+        //check if audio source is assigned first
         if (sfxSource != null)
             sfxSource.PlayOneShot(buttonClip);
     }
 
+    //check if entered code is correct;
+    //if correct, invoke onCorrectCode event;
+    //called when user presses "Enter" button
     public void Execute()
     {
         if (textOB.text == correctCode)
         {
-            //AudioManager.Instance.PlaySFX(correctClip);
             if (sfxSource != null)
                 sfxSource.PlayOneShot(correctClip);
+
             textOB.text = "Correct!";
             onCorrectCode.Invoke();
         }
         else
         {
-            //AudioManager.Instance.PlaySFX(wrongClip);
             if (sfxSource != null)
                 sfxSource.PlayOneShot(wrongClip);
+
             textOB.text = "Wrong!";
         }
 
@@ -75,11 +78,11 @@ public class KeypadUI : MonoBehaviour
     public void Clear()
     {
         textOB.text = "";
-        //AudioManager.Instance.PlaySFX(buttonClip);
         if (sfxSource != null)
             sfxSource.PlayOneShot(buttonClip);
     }
 
+    //clear "Correct!" or "Wrong!" after 1 second delay
     IEnumerator ClearTextAfterDelay()
     {
         yield return new WaitForSeconds(1f);

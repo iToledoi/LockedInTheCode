@@ -13,19 +13,19 @@ public class ColorFlash : MonoBehaviour
 
     private Coroutine flashCoroutine;
 
+    //initialize renderer and default color
     void Awake()
     {
         ren = GetComponent<Renderer>();
         defaultColor = ren.material.color;
     }
 
+    //start the flash effect
     public void Flash()
     {
+        // check if coroutine is already running
         if (flashCoroutine == null)
-        {
-            Debug.Log("ColorFlash: Starting flash.");
             flashCoroutine = StartCoroutine(FlashRoutine());
-        }
     }
 
     private IEnumerator FlashRoutine()
@@ -33,15 +33,16 @@ public class ColorFlash : MonoBehaviour
         // instantly switch color
         ren.material.color = flashColor;
 
+        // fade back to default color overtime
         float t = 0f;
         while (t < fadeDuration)
         {
-            Debug.Log("ColorFlash: Fading... " + (t / fadeDuration));
             t += Time.deltaTime;
             ren.material.color = Color.Lerp(flashColor, defaultColor, t / fadeDuration);
             yield return null;
         }
 
+        // end coroutine and reset color
         flashCoroutine = null;
         ren.material.color = defaultColor;
     }
